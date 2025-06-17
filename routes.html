@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminhos de Santiago | Rotas</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/routes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./assets/SantiGo.png" alt="Caminhos de Santiago" class="logo-img">
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" >Início</a></li>
+                    <li><a href="routes.html" class="active">Caminhos</a></li>
+                    <li><a href="lodging.html">Alojamentos</a></li>
+                    <li><a href="planning.html">Planeamento</a></li>
+                    <li><a href="login.html" class="auth-link"><i class="fas fa-user"></i> Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="routes-hero">
+            <div class="container">
+                <h2>Descubra Todas as Rotas</h2>
+                <p>Selecione um caminho para ver detalhes e etapas</p>
+            </div>
+        </section>
+
+        <section class="route-filter">
+            <div class="container">
+                <div class="filter-card">
+                    <h3>Filtrar Rotas</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="difficulty">Dificuldade:</label>
+                            <select id="difficulty">
+                                <option value="all">Todas</option>
+                                <option value="easy">Fácil</option>
+                                <option value="medium">Média</option>
+                                <option value="hard">Difícil</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="distance">Distância:</label>
+                            <select id="distance">
+                                <option value="all">Todas</option>
+                                <option value="short">Curta (< 100km)</option>
+                                <option value="medium">Média (100-300km)</option>
+                                <option value="long">Longa (> 300km)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duração:</label>
+                            <select id="duration">
+                                <option value="all">Todas</option>
+                                <option value="week">1 semana</option>
+                                <option value="2weeks">2 semanas</option>
+                                <option value="month">1 mês+</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Aplicar Filtros</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-routes">
+            <div class="container">
+                <div class="route-list">
+                    <article class="route-item">
+                        <div class="route-item-image" id="frances"></div>
+                        <div class="route-item-content">
+                            <h3>Caminho Francês</h3>
+                            <div class="route-meta">
+                                <span><i class="fas fa-route"></i> 780 km</span>
+                                <span><i class="fas fa-calendar-alt"></i> 30-35 dias</span>
+                                <span><i class="fas fa-mountain"></i> Médio</span>
+                            </div>
+                            <p>O mais popular dos caminhos, começa em Saint-Jean-Pied-de-Port, na França, e atravessa o norte da Espanha. Rico em infraestrutura e história.</p>
+                            <div class="route-tags">
+                                <span class="tag">Popular</span>
+                                <span class="tag">Bem sinalizado</span>
+                                <span class="tag">Muitos albergues</span>
+                            </div>
+                            <a href="./details.html" class="btn-secondary">Ver Mais</a>
+                        </div>
+                    </article>
+
+                    <article class="route-item">
+                        <div class="route-item-image" id="portugues-detail"></div>
+                        <div class="route-item-content">
+                            <h3>Caminho Português</h3>
+                            <div class="route-meta">
+                                <span><i class="fas fa-route"></i> 620 km (do Porto)</span>
+                                <span><i class="fas fa-calendar-alt"></i> 10-12 dias</span>
+                                <span><i class="fas fa-mountain"></i> Fácil-Médio</span>
+                            </div>
+                            <p>Do Porto ou Lisboa até Santiago, passando por cidades históricas portuguesas como Ponte de Lima e Valença.</p>
+                            <div class="route-tags">
+                                <span class="tag">Acessível</span>
+                                <span class="tag">Boa comida</span>
+                                <span class="tag">Poucas subidas</span>
+                            </div>
+                            <a href="./details.html" class="btn-secondary">Ver Mais</a>
+                        </div>
+                    </article>
+
+                    <article class="route-item">
+                        <div class="route-item-image" id="portugues-detail"></div>
+                        <div class="route-item-content">
+                            <h3>Caminho Português</h3>
+                            <div class="route-meta">
+                                <span><i class="fas fa-route"></i> 620 km (do Porto)</span>
+                                <span><i class="fas fa-calendar-alt"></i> 10-12 dias</span>
+                                <span><i class="fas fa-mountain"></i> Fácil-Médio</span>
+                            </div>
+                            <p>Do Porto ou Lisboa até Santiago, passando por cidades históricas portuguesas como Ponte de Lima e Valença.</p>
+                            <div class="route-tags">
+                                <span class="tag">Acessível</span>
+                                <span class="tag">Boa comida</span>
+                                <span class="tag">Poucas subidas</span>
+                            </div>
+                            <a href="./details.html" class="btn-secondary">Ver Mais</a>
+                        </div>
+                    </article>
+
+                    <article class="route-item">
+                        <div class="route-item-image" id="portugues-detail"></div>
+                        <div class="route-item-content">
+                            <h3>Caminho Português</h3>
+                            <div class="route-meta">
+                                <span><i class="fas fa-route"></i> 620 km (do Porto)</span>
+                                <span><i class="fas fa-calendar-alt"></i> 10-12 dias</span>
+                                <span><i class="fas fa-mountain"></i> Fácil-Médio</span>
+                            </div>
+                            <p>Do Porto ou Lisboa até Santiago, passando por cidades históricas portuguesas como Ponte de Lima e Valença.</p>
+                            <div class="route-tags">
+                                <span class="tag">Acessível</span>
+                                <span class="tag">Boa comida</span>
+                                <span class="tag">Poucas subidas</span>
+                            </div>
+                            <a href="route-portugues.html" class="btn-secondary">Ver Etapas</a>
+                        </div>
+                    </article>
+
+                    <article class="route-item">
+                        <div class="route-item-image" id="portugues-detail"></div>
+                        <div class="route-item-content">
+                            <h3>Caminho Português</h3>
+                            <div class="route-meta">
+                                <span><i class="fas fa-route"></i> 620 km (do Porto)</span>
+                                <span><i class="fas fa-calendar-alt"></i> 10-12 dias</span>
+                                <span><i class="fas fa-mountain"></i> Fácil-Médio</span>
+                            </div>
+                            <p>Do Porto ou Lisboa até Santiago, passando por cidades históricas portuguesas como Ponte de Lima e Valença.</p>
+                            <div class="route-tags">
+                                <span class="tag">Acessível</span>
+                                <span class="tag">Boa comida</span>
+                                <span class="tag">Poucas subidas</span>
+                            </div>
+                            <a href="route-portugues.html" class="btn-secondary">Ver Etapas</a>
+                        </div>
+                    </article>
+
+                    <article class="route-item">
+                        <div class="route-item-image" id="portugues-detail"></div>
+                        <div class="route-item-content">
+                            <h3>Caminho Português</h3>
+                            <div class="route-meta">
+                                <span><i class="fas fa-route"></i> 620 km (do Porto)</span>
+                                <span><i class="fas fa-calendar-alt"></i> 10-12 dias</span>
+                                <span><i class="fas fa-mountain"></i> Fácil-Médio</span>
+                            </div>
+                            <p>Do Porto ou Lisboa até Santiago, passando por cidades históricas portuguesas como Ponte de Lima e Valença.</p>
+                            <div class="route-tags">
+                                <span class="tag">Acessível</span>
+                                <span class="tag">Boa comida</span>
+                                <span class="tag">Poucas subidas</span>
+                            </div>
+                            <a href="route-portugues.html" class="btn-secondary">Ver Etapas</a>
+                        </div>
+                    </article>
+
+                    <article class="route-item">
+                        <div class="route-item-image" id="portugues-detail"></div>
+                        <div class="route-item-content">
+                            <h3>Caminho Português</h3>
+                            <div class="route-meta">
+                                <span><i class="fas fa-route"></i> 620 km (do Porto)</span>
+                                <span><i class="fas fa-calendar-alt"></i> 10-12 dias</span>
+                                <span><i class="fas fa-mountain"></i> Fácil-Médio</span>
+                            </div>
+                            <p>Do Porto ou Lisboa até Santiago, passando por cidades históricas portuguesas como Ponte de Lima e Valença.</p>
+                            <div class="route-tags">
+                                <span class="tag">Acessível</span>
+                                <span class="tag">Boa comida</span>
+                                <span class="tag">Poucas subidas</span>
+                            </div>
+                            <a href="route-portugues.html" class="btn-secondary">Ver Etapas</a>
+                        </div>
+                    </article>
+
+                    <article class="route-item">
+                        <div class="route-item-image" id="portugues-detail"></div>
+                        <div class="route-item-content">
+                            <h3>Caminho Português</h3>
+                            <div class="route-meta">
+                                <span><i class="fas fa-route"></i> 620 km (do Porto)</span>
+                                <span><i class="fas fa-calendar-alt"></i> 10-12 dias</span>
+                                <span><i class="fas fa-mountain"></i> Fácil-Médio</span>
+                            </div>
+                            <p>Do Porto ou Lisboa até Santiago, passando por cidades históricas portuguesas como Ponte de Lima e Valença.</p>
+                            <div class="route-tags">
+                                <span class="tag">Acessível</span>
+                                <span class="tag">Boa comida</span>
+                                <span class="tag">Poucas subidas</span>
+                            </div>
+                            <a href="route-portugues.html" class="btn-secondary">Ver Etapas</a>
+                        </div>
+                    </article>
+
+                    <!-- Mais rotas aqui -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Ajudamos peregrinos a planejar sua jornada desde 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Blog do Peregrino</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Caminhos de Santiago. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

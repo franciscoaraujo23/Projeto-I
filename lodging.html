@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminhos de Santiago | Alojamentos</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/lodging.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./assets/SantiGo.png" alt="Caminhos de Santiago" class="logo-img">
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="routes.html">Caminhos</a></li>
+                    <li><a href="lodging.html" class="active">Alojamentos</a></li>
+                    <li><a href="planning.html">Planeamento</a></li>
+                    <li><a href="login.html" class="auth-link"><i class="fas fa-user"></i> Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="lodging-hero">
+            <div class="container">
+                <h2>Alojamentos no Caminho</h2>
+                <p>Encontra o lugar perfeito para descansar em cada etapa</p>
+            </div>
+        </section>
+
+        <section class="lodging-filter">
+            <div class="container">
+                <div class="filter-card">
+                    <h3>Encontrar Alojamento</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="route">Rota:</label>
+                                <select id="route">
+                                    <option value="all">Todas as Rotas</option>
+                                    <option value="frances">Caminho Francês</option>
+                                    <option value="portugues">Caminho Português</option>
+                                    <option value="norte">Caminho do Norte</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Localização:</label>
+                                <input type="text" id="location" placeholder="Cidade ou região">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="type">Tipo:</label>
+                                <select id="type">
+                                    <option value="all">Todos</option>
+                                    <option value="albergue">Albergue</option>
+                                    <option value="hotel">Hotel</option>
+                                    <option value="hostel">Hostel</option>
+                                    <option value="casa-rural">Residencial</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Preço:</label>
+                                <select id="price">
+                                    <option value="all">Qualquer</option>
+                                    <option value="low">Económico (< €20)</option>
+                                    <option value="medium">Médio (€20-€50)</option>
+                                    <option value="high">Confortável (> €50)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">Buscar Alojamentos</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="lodging-results">
+            <div class="container">
+                <div class="lodging-grid">
+                    <article class="lodging-card">
+                        <div class="lodging-image" id="albergue1"></div>
+                        <div class="lodging-content">
+                            <h3>Albergue Municipal de Roncesvalles</h3>
+                            <div class="lodging-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Roncesvalles, Navarra</span>
+                                <span><i class="fas fa-euro-sign"></i> 12/noite</span>
+                                <span><i class="fas fa-bed"></i> 183 camas</span>
+                            </div>
+                            <div class="lodging-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (320 avaliações)</span>
+                            </div>
+                            <p>Albergue público e bem equipado, ideal para o primeiro dia do Caminho Francês. Possui cozinha, lavandaria e uma área comum espaçosa.</p>
+                            <div class="lodging-actions">
+                                <a href="#" class="btn-secondary">Ver Detalhes</a>
+                                <a href="#" class="btn-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="lodging-card">
+                        <div class="lodging-image" id="albergue1"></div>
+                        <div class="lodging-content">
+                            <h3>Albergue Municipal de Roncesvalles</h3>
+                            <div class="lodging-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Roncesvalles, Navarra</span>
+                                <span><i class="fas fa-euro-sign"></i> 12/noite</span>
+                                <span><i class="fas fa-bed"></i> 183 camas</span>
+                            </div>
+                            <div class="lodging-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (320 avaliações)</span>
+                            </div>
+                            <p>Albergue público e bem equipado, ideal para o primeiro dia do Caminho Francês. Possui cozinha, lavanderia e área comum espaçosa.</p>
+                            <div class="lodging-actions">
+                                <a href="#" class="btn-secondary">Ver Detalhes</a>
+                                <a href="#" class="btn-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="lodging-card">
+                        <div class="lodging-image" id="albergue1"></div>
+                        <div class="lodging-content">
+                            <h3>Albergue Municipal de Roncesvalles</h3>
+                            <div class="lodging-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Roncesvalles, Navarra</span>
+                                <span><i class="fas fa-euro-sign"></i> 12/noite</span>
+                                <span><i class="fas fa-bed"></i> 183 camas</span>
+                            </div>
+                            <div class="lodging-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (320 avaliações)</span>
+                            </div>
+                            <p>Albergue público e bem equipado, ideal para o primeiro dia do Caminho Francês. Possui cozinha, lavanderia e uma área comum espaçosa.</p>
+                            <div class="lodging-actions">
+                                <a href="#" class="btn-secondary">Ver Detalhes</a>
+                                <a href="#" class="btn-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="lodging-card">
+                        <div class="lodging-image" id="albergue1"></div>
+                        <div class="lodging-content">
+                            <h3>Albergue Municipal de Roncesvalles</h3>
+                            <div class="lodging-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Roncesvalles, Navarra</span>
+                                <span><i class="fas fa-euro-sign"></i> 12/noite</span>
+                                <span><i class="fas fa-bed"></i> 183 camas</span>
+                            </div>
+                            <div class="lodging-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (320 avaliações)</span>
+                            </div>
+                            <p>Albergue público e bem equipado, ideal para o primeiro dia do Caminho Francês. Possui cozinha, lavanderia e uma área comum espaçosa.</p>
+                            <div class="lodging-actions">
+                                <a href="#" class="btn-secondary">Ver Detalhes</a>
+                                <a href="#" class="btn-primary">Reservar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Mais alojamentos aqui -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Ajudamos peregrinos a planear a sua jornada desde 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Blog do Peregrino</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Caminhos de Santiago. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

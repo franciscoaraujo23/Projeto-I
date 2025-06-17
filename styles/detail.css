@@ -1,0 +1,211 @@
+/* ===== VARIÁVEIS ===== */
+:root {
+    --stage-card-bg: #FFFFFF;
+    --stage-card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --easy-color: #8A9A5B; /* Verde */
+    --moderate-color: #C2A14D; /* Dourado */
+    --hard-color: #A44A3F; /* Vermelho */
+}
+
+/* ===== ESTRUTURA PRINCIPAL ===== */
+.detail-container {
+    padding: 2rem 0;
+}
+
+.route-header {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.route-hero {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.route-info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--stage-card-shadow);
+}
+
+.route-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.difficulty-label {
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* ===== BOTÕES DE DIFICULDADE ===== */
+.difficulty-selector {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-difficulty {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-difficulty.active {
+    color: white;
+}
+
+.btn-difficulty[data-difficulty="easy"] {
+    background: #f0f7ea;
+    color: var(--easy-color);
+}
+
+.btn-difficulty[data-difficulty="easy"].active {
+    background: var(--easy-color);
+}
+
+.btn-difficulty[data-difficulty="moderate"] {
+    background: #faf5e6;
+    color: var(--moderate-color);
+}
+
+.btn-difficulty[data-difficulty="moderate"].active {
+    background: var(--moderate-color);
+}
+
+.btn-difficulty[data-difficulty="hard"] {
+    background: #fae9e7;
+    color: var(--hard-color);
+}
+
+.btn-difficulty[data-difficulty="hard"].active {
+    background: var(--hard-color);
+}
+
+/* ===== LISTA DE ETAPAS ===== */
+.stages-list {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stage-card {
+    background: var(--stage-card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--stage-card-shadow);
+}
+
+.stage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.stage-distance {
+    background: var(--highlight-blue);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.stage-details p {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== MAPA ===== */
+.map-container {
+    height: 400px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .route-hero {
+        height: 200px;
+    }
+    
+    .route-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .difficulty-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-difficulty {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Estilos para as etapas */
+.stage-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stage-distance {
+  background: var(--highlight-blue);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Botões de dificuldade */
+.btn-difficulty {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border: 2px solid var(--highlight-green);
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-difficulty.active {
+  background: var(--highlight-green);
+  color: white;
+}

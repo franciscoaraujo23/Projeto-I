@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Caminho | SantiGo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <script type="module" src="js/views/public/detailsView.js"></script>
+    <!-- Header (igual ao index.html) -->
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./assets/SantiGo.png" alt="Caminhos de Santiago" class="logo-img">
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li> 
+                    <li><a href="routes.html">Caminhos</a></li>
+                    <li><a href="lodging.html">Alojamentos</a></li>
+                    <li><a href="planning.html">Planeamento</a></li>
+                    <li><a href="login.html" class="auth-link"><i class="fas fa-user"></i> Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="detail-container">
+        <!-- Cabeçalho do Caminho -->
+        <section class="route-header">
+            <div class="route-hero" id="route-hero-image"></div>
+            <div class="route-info">
+                <h1 id="route-name">Caminho Português</h1>
+                <p id="route-origin" class="route-meta-item"></p>
+                <p id="route-destination" class="route-meta-item"></p>
+                <p id="route-description" class="route-meta-item"></p>
+                <div class="route-meta">
+                    <span id="route-distance">Distância: -- km</span>
+                    <span id="route-duration">Duração: -- dias</span>
+                    <span id="route-difficulty">Dificuldade: <span class="difficulty-label">--</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selector de Dificuldade -->
+        <section class="difficulty-selector">
+            <h2>Escolhe a versão do percurso:</h2>
+            <div class="difficulty-buttons">
+                <button class="btn-difficulty active" data-difficulty="Fácil">Fácil</button>
+                <button class="btn-difficulty" data-difficulty="Moderado">Moderado</button>
+                <button class="btn-difficulty" data-difficulty="Difícil">Difícil</button>
+            </div>
+        </section>
+
+        <!-- Lista de Etapas -->
+        <section class="route-stages">
+            <h2>Etapas do Percurso</h2>
+            <div class="stages-list" id="stages-list">
+                <!-- Dinamicamente preenchido pelo JavaScript -->
+            </div>
+        </section>
+
+        <!-- Mapa (placeholder) -->
+        <section class="route-map">
+            <h2>Mapa do Percurso</h2>
+            <div class="map-container">
+                <p>Mapa interativo será implementado aqui.</p>
+                <!-- Integração futura com Google Maps/Leaflet -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (igual ao index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Ajudamos peregrinos a planear a sua jornada desde 2023.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Blog do Peregrino</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Caminhos de Santiago. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

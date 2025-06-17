@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Caminho | SantiGo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="js/views/public/detailsView.js"></script>
+</head>
+<body>
+    <!-- Header (igual ao index.html) -->
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./assets/SantiGo.png" alt="Caminhos de Santiago" class="logo-img">
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li> 
+                    <li><a href="routes.html">Caminhos</a></li>
+                    <li><a href="lodging.html">Alojamentos</a></li>
+                    <li><a href="planning.html">Planeamento</a></li>
+                    <li><a href="login.html" class="auth-link"><i class="fas fa-user"></i> Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="detail-container">
+        <!-- Cabeçalho do Caminho -->
+        <section class="route-header">
+            <div class="route-hero" id="route-hero-image"></div>
+            <div class="route-info">
+                <div class="route-info">
+  <h1 id="route-name">...</h1>
+  <p id="route-origin" class="route-meta-item"></p>
+  <p id="route-destination" class="route-meta-item"></p>
+  <p id="route-description" class="route-meta-item"></p>
+  <div class="route-meta">
+    <span id="route-distance">...</span>
+    <span id="route-duration">...</span>
+    <span id="route-difficulty">...</span>
+  </div>
+</div>
+                <h1 id="route-name">Caminho Português</h1>
+                <div class="route-meta">
+                    <span id="route-distance">Distância: 260 km</span>
+                    <span id="route-duration">Duração: 12 dias</span>
+                    <span id="route-difficulty">Dificuldade: <span class="difficulty-label">Moderado</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selector de Dificuldade -->
+        <section class="difficulty-selector">
+            <h2>Escolhe a versão do percurso:</h2>
+            <div class="difficulty-buttons">
+                <button class="btn-difficulty active" data-difficulty="easy">Fácil</button>
+                <button class="btn-difficulty" data-difficulty="moderate">Moderado</button>
+                <button class="btn-difficulty" data-difficulty="hard">Difícil</button>
+            </div>
+        </section>
+
+        <!-- Lista de Etapas -->
+        <section class="route-stages">
+            <h2>Etapas do Percurso</h2>
+            <div class="stages-list" id="stages-list">
+                <!-- Etapas serão renderizadas via JavaScript -->
+                <!-- Exemplo de etapa (mock): -->
+                <div class="stage-card">
+                    <div class="stage-header">
+                        <h3>Etapa 1: Porto → Vilarinho</h3>
+                        <span class="stage-distance">12 km</span>
+                    </div>
+                    <div class="stage-details">
+                        <p><strong>Duração:</strong> 3-4 horas</p>
+                        <p><strong>Pontos de interesse:</strong> Sé do Porto, Ponte D. Luís I.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa (placeholder) -->
+        <section class="route-map">
+            <h2>Mapa do Percurso</h2>
+            <div class="map-container">
+                <p>Mapa interativo será implementado aqui.</p>
+                <!-- Integração futura com Google Maps/Leaflet -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (igual ao index.html) -->
+    <footer>
+        <!-- ... -->
+    </footer>
+
+    
+</body>
+</html>
