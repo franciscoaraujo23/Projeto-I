@@ -1,0 +1,166 @@
+// APAGAR COMENTÁRIOS?
+export const peregrinos = [
+  {
+    id: 1,
+    nome: "João Silva",
+    email: "joao.silva@mail.com",
+    password: "123456",
+    avatarUrl: "img/avatar1.png",
+    pontos: 350,
+    nivel: 3,
+    caminhosPercorridos: ["Caminho Português", "Caminho Francês"],
+    etapasConcluidas: 27,
+    conquistas: ["Primeira Etapa", "Metade do Caminho", "Chegada a Santiago"],
+    comentarios: [
+      {
+        idComentario: 101,
+        texto: "Excelente etapa!",
+        data: "2025-06-01"
+      }
+    ],
+    dataRegisto: "2025-05-01",
+    ultimoLogin: "2025-06-15"
+  },
+  {
+    id: 2,
+    nome: "Maria Costa",
+    email: "maria.costa@mail.com",
+    password: "abcdef",
+    avatarUrl: "img/avatar2.png",
+    pontos: 90,
+    nivel: 1,
+    caminhosPercorridos: ["Caminho Português"],
+    etapasConcluidas: 6,
+    conquistas: ["Primeira Etapa"],
+    comentarios: [
+      {
+        idComentario: 102,
+        texto: "Boa paisagem, recomendo!",
+        data: "2025-06-10"
+      }
+    ],
+    dataRegisto: "2025-05-20",
+    ultimoLogin: "2025-06-16"
+  },
+  {
+    id: 3,
+    nome: "Carlos Mendes",
+    email: "carlos.mendes@mail.com",
+    password: "qwerty",
+    avatarUrl: "img/avatar3.png",
+    pontos: 780,
+    nivel: 5,
+    caminhosPercorridos: ["Caminho Francês", "Caminho do Norte", "Via de la Plata"],
+    etapasConcluidas: 82,
+    conquistas: ["Primeira Etapa", "Metade do Caminho", "Chegada a Santiago", "Mestre do Caminho"],
+    comentarios: [
+      {
+        idComentario: 103,
+        texto: "Cheguei ao fim, uma jornada inesquecível.",
+        data: "2025-06-12"
+      },
+      {
+        idComentario: 104,
+        texto: "Desafiante, mas valeu a pena!",
+        data: "2025-06-14"
+      }
+    ],
+    dataRegisto: "2025-04-10",
+    ultimoLogin: "2025-06-17"
+  },
+  {
+    id: 4,
+    nome: "Ana Ribeiro",
+    email: "ana.ribeiro@mail.com",
+    password: "senha123",
+    avatarUrl: "img/avatar4.png",
+    pontos: 260,
+    nivel: 2,
+    caminhosPercorridos: ["Caminho Português"],
+    etapasConcluidas: 19,
+    conquistas: ["Primeira Etapa", "Metade do Caminho"],
+    comentarios: [],
+    dataRegisto: "2025-05-15",
+    ultimoLogin: "2025-06-14"
+  },
+  {
+    id: 5,
+    nome: "Rui Almeida",
+    email: "rui.almeida@mail.com",
+    password: "cam1nho",
+    avatarUrl: "img/avatar5.png",
+    pontos: 610,
+    nivel: 4,
+    caminhosPercorridos: ["Caminho Francês", "Caminho Inglês"],
+    etapasConcluidas: 48,
+    conquistas: ["Primeira Etapa", "Metade do Caminho", "Chegada a Santiago"],
+    comentarios: [
+      {
+        idComentario: 105,
+        texto: "A etapa mais difícil até agora.",
+        data: "2025-06-13"
+      }
+    ],
+    dataRegisto: "2025-03-30",
+    ultimoLogin: "2025-06-15"
+  },
+
+   {
+    id: 6,
+    nome: "Beatriz Nunes",
+    email: "beatriz.nunes@mail.com",
+    password: "senha456",
+    avatarUrl: "img/avatar6.png",
+    pontos: 120,
+    nivel: 2,
+    caminhosPercorridos: ["Caminho Português"],
+    etapasConcluidas: 12,
+    conquistas: ["Primeira Etapa"],
+    comentarios: [
+      {
+        idComentario: 106,
+        texto: "Choveu bastante, mas foi tranquilo.",
+        data: "2025-06-11"
+      }
+    ],
+    dataRegisto: "2025-05-25",
+    ultimoLogin: "2025-06-17"
+  },
+  {
+    id: 7,
+    nome: "Tiago Moreira",
+    email: "tiago.moreira@mail.com",
+    password: "moreira2025",
+    avatarUrl: "img/avatar7.png",
+    pontos: 45,
+    nivel: 1,
+    caminhosPercorridos: [],
+    etapasConcluidas: 3,
+    conquistas: [],
+    comentarios: [],
+    dataRegisto: "2025-06-01",
+    ultimoLogin: "2025-06-10"
+  },
+  {
+    id: 8,
+    nome: "Sofia Matos",
+    email: "sofia.matos@mail.com",
+    password: "sofia123",
+    avatarUrl: "img/avatar8.png",
+    pontos: 670,
+    nivel: 4,
+    caminhosPercorridos: ["Caminho Francês", "Caminho Primitivo"],
+    etapasConcluidas: 55,
+    conquistas: ["Primeira Etapa", "Metade do Caminho", "Chegada a Santiago", "Mestre do Caminho"],
+    comentarios: [
+      {
+        idComentario: 107,
+        texto: "Melhor trilho até agora!",
+        data: "2025-06-12"
+      }
+    ],
+    dataRegisto: "2025-04-05",
+    ultimoLogin: "2025-06-17"
+  }
+];
+ 

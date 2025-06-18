@@ -1,76 +1,121 @@
 /**
- * Gerencia o estado global da aplicação (autenticação, dados do usuário, gamificação, etc.)
- * Segue padrão Observer para notificar mudanças de estado.
+ * Gerenciador central de estado da aplicação
+ * Responsável por:
+ * - Armazenar dados globais (rotas, alojamentos, usuários, etc.)
+ * - Gerenciar estado de autenticação
+ * - Notificar componentes sobre mudanças de estado
  */
+
 class AppState {
   constructor() {
     // Estado inicial
-    this._state = {
-      // Autenticação
-      isAuthenticated: false,
-      user: null, // { id, nome, email, nivelGamificacao, etc. }
-      
-      // Dados carregados
-      routes: [],      // Lista de caminhos
-      lodgings: [],    // Alojamentos
-      comments: [],    // Comentários da comunidade
-      leaderboard: [], // Ranking de peregrinos
-      
-      // Gamificação
-      userProgress: null, // { nivel, conquistas, etapasCompletas }
-      
-      // UI/Config
-      currentPage: '',
-      mapsLoaded: false,
-      weatherData: null
+    this.state = {
+      routes: [],
+      lodgings: [],
+      comments: [],
+      users: [],
+      currentUser: null,
+      gamification: {
+        levels: [],
+        userProgress: {}
+      },
+      // Para APIs externas
+      weatherData: null,
+      mapData: null
     };
 
     // Listeners para atualizações de estado
-    this._listeners = [];
+    this.listeners = [];
   }
 
-  // --- Métodos principais ---
-  getState() {
-    return this._state;
+  // ==================== MÉTODOS PÚBLICOS ====================
+
+  /**
+   * Define dados no estado global
+   * @param {string} key - Nome do conjunto de dados (ex: 'routes')
+   * @param {*} data - Dados a serem armazenados
+   */
+  setData(key, data) {
+    if (key in this.state) {
+      this.state[key] = data;
+      this._notifyListeners(key);
+    } else {
+      console.warn(`Chave "${key}" não existe no estado.`);
+    }
+    return this;
   }
 
-  setAuthState(isAuthenticated, userData = null) {
-    this._state.isAuthenticated = isAuthenticated;
-    this._state.user = userData;
-    this._notifyListeners('auth');
+  /**
+   * Obtém dados do estado global
+   * @param {string} key - Nome do conjunto de dados
+   * @returns {*} Dados armazenados
+   */
+  getData(key) {
+    return key in this.state ? this.state[key] : null;
   }
 
-  setUserProgress(progress) {
-    this._state.userProgress = progress;
+  /**
+   * Define o usuário logado
+   * @param {object} user - Dados do usuário
+   */
+  setUser(user) {
+    this.state.currentUser = user;
+    this._notifyListeners('user');
+    return this;
+  }
+
+  /**
+   * Remove o usuário logado (logout)
+   */
+  clearUser() {
+    this.state.currentUser = null;
+    this._notifyListeners('user');
+    return this;
+  }
+
+  /**
+   * Verifica se há um usuário autenticado
+   * @returns {boolean}
+   */
+  isAuthenticated() {
+    return !!this.state.currentUser;
+  }
+
+  /**
+   * Atualiza progresso na gamificação
+   * @param {string} userId - ID do usuário
+   * @param {object} progress - Dados de progresso
+   */
+  updateUserProgress(userId, progress) {
+    this.state.gamification.userProgress[userId] = progress;
     this._notifyListeners('gamification');
+    return this;
   }
 
-  loadInitialData({ routes, lodgings, comments, leaderboard }) {
-    this._state.routes = routes || [];
-    this._state.lodgings = lodgings || [];
-    this._state.comments = comments || [];
-    this._state.leaderboard = leaderboard || [];
-    this._notifyListeners('data');
+  /**
+   * Registra um listener para mudanças de estado
+   * @param {string} key - Chave do estado a observar
+   * @param {function} callback - Função a ser executada na mudança
+   */
+  addListener(key, callback) {
+    this.listeners.push({ key, callback });
+    return this;
   }
 
-  // --- Gerenciamento de listeners ---
-  addListener(callback) {
-    this._listeners.push(callback);
-  }
+  // ==================== MÉTODOS PRIVADOS ====================
 
+  /**
+   * Notifica listeners sobre mudanças
+   * @param {string} changedKey - Chave que foi alterada
+   */
   _notifyListeners(changedKey) {
-    this._listeners.forEach(callback => callback(this._state, changedKey));
-  }
-
-  // --- Helpers específicos do projeto ---
-  getCurrentUserLevel() {
-    return this._state.userProgress?.nivel || 0;
-  }
-
-  getRouteById(routeId) {
-    return this._state.routes.find(route => route.id === routeId);
+    this.listeners.forEach(({ key, callback }) => {
+      if (key === changedKey) {
+        callback(this.state[key]);
+      }
+    });
   }
 }
 
-// Exporta como singleton (única instância)
+// Exporta uma instância singleton (apenas uma instância global)
 export const appState = new AppState();
