@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todos os Caminhos</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/routes.css" />
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="./assets/SantiGo.png" alt="Caminhos de Santiago" class="logo-img" />
+        </a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="routes.html">Caminhos</a></li>
+          <li><a href="lodging.html">Alojamentos</a></li>
+          <li><a href="planning.html">Planeamento</a></li>
+          <li><a href="login.html" class="auth-link"><i class="fas fa-user"></i> Entrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="routes-hero">
+      <div class="container">
+        <h2>Todos os Caminhos</h2>
+        <p>Descobre os diferentes percursos até Santiago de Compostela.</p>
+      </div>
+    </section>
+
+    <section class="route-filter">
+      <div class="container">
+        <div class="filter-card">
+          <h3>Filtrar Caminhos</h3>
+          <div class="form-group">
+            <label for="search-nome">Pesquisar por nome:</label>
+            <input type="text" id="search-nome" placeholder="Ex: Caminho da Costa" />
+          </div>
+          <div class="form-group">
+            <label for="ordenar-distancia">Ordenar por:</label>
+            <select id="ordenar-distancia">
+              <option value="">Padrão</option>
+              <option value="asc">Distância crescente</option>
+              <option value="desc">Distância decrescente</option>
+              <option value="rating">Melhor Avaliados</option>
+              <option value="worst">Pior Avaliados</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="all-routes">
+      <div class="container">
+        <div id="routes-list" class="route-list">
+          <!-- Caminhos serão renderizados aqui pelo JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+        <h3>Sobre Nós</h3>
+        <p>Ajudamos peregrinos a planear a sua jornada desde 2023.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Links Úteis</h3>
+        <ul>
+          <li><a href="#">Perguntas Frequentes</a></li>
+          <li><a href="#">Blog do Peregrino</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Redes Sociais</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 Caminhos de Santiago. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/views/public/routesView.js"></script>
+</body>
+</html>
