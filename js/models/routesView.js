@@ -2,13 +2,7 @@ import { caminhos } from "../../mock/caminhos.js";
 
 export class RoutesView {
   constructor() {
-    this.avaliacoes = new Map();
-    caminhos.forEach(c => this.avaliacoes.set(c.id, this.getAvaliacaoAleatoria()));
     this.init();
-  }
-
-  getAvaliacaoAleatoria() {
-    return parseFloat((Math.random() * 4.9 + 0.1).toFixed(1));
   }
 
   init() {
@@ -48,19 +42,12 @@ export class RoutesView {
         return ordenacao === "asc" ? aKm - bKm : bKm - aKm;
       });
     } else if (ordenacao === "rating") {
-      filtrados.sort((a, b) => this.avaliacoes.get(b.id) - this.avaliacoes.get(a.id));
+      filtrados.sort((a, b) => b.avaliacao - a.avaliacao);
     } else if (ordenacao === "worst") {
-      filtrados.sort((a, b) => this.avaliacoes.get(a.id) - this.avaliacoes.get(b.id));
+      filtrados.sort((a, b) => a.avaliacao - b.avaliacao);
     }
 
     this.renderCaminhos(filtrados);
-  }
-
-  alterarPontuacao(id, delta) {
-    const atual = this.avaliacoes.get(id);
-    const novo = Math.min(5, Math.max(0.1, parseFloat((atual + delta).toFixed(1))));
-    this.avaliacoes.set(id, novo);
-    this.applyFilters();
   }
 
   renderCaminhos(caminhos) {
@@ -77,11 +64,8 @@ export class RoutesView {
           </div>
           <p>${caminho.descricao}</p>
           <div class="rating">
-            <span class="score">${this.avaliacoes.get(caminho.id)} ⭐</span>
-            <button onclick="window.routesViewInstance.alterarPontuacao(${caminho.id}, 0.1)">👍</button>
-            <button onclick="window.routesViewInstance.alterarPontuacao(${caminho.id}, -0.1)">👎</button>
+            <span class="score">${caminho.avaliacao.toFixed(1)} ⭐</span>
           </div>
-
           <a href="details.html?id=${caminho.id}" class="btn-primary">Ver Detalhes</a>
         </div>
       </div>

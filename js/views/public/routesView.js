@@ -78,8 +78,6 @@ export class RoutesView {
           <p>${caminho.descricao}</p>
           <div class="rating">
             <span class="score">${this.avaliacoes.get(caminho.id)} ⭐</span>
-            <button onclick="window.routesViewInstance.alterarPontuacao(${caminho.id}, 0.1)">👍</button>
-            <button onclick="window.routesViewInstance.alterarPontuacao(${caminho.id}, -0.1)">👎</button>
           </div>
 
           <a href="details.html?id=${caminho.id}" class="btn-primary">Ver Detalhes</a>

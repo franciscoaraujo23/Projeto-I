@@ -7,6 +7,7 @@ export const caminhos = [
     "descricao": "Este percurso atravessa o norte de Portugal e a Galiza, passando por cidades históricas como Ponte de Lima e Valença.",
     "geojson": "geojson/central.geojson",
     "imagem": "./assets/central.jpg",
+    
     "versoes": [
       {
         "dificuldade": "Fácil",

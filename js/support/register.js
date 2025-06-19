@@ -1,11 +1,7 @@
-document.getElementById("register-form").addEventListener("submit", function (e) {
+document.getElementById("registerForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const nome = (
-  document.getElementById("first-name").value.trim() +
-  " " +
-  document.getElementById("last-name").value.trim()
-);
+  const nome = document.getElementById("nome").value.trim();
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
@@ -14,17 +10,34 @@ document.getElementById("register-form").addEventListener("submit", function (e)
     return;
   }
 
-  let users = JSON.parse(localStorage.getItem("peregrinos")) || [];
+  const userData = {
+    nome,
+    email,
+    password,
+    avatarUrl: "img/avatar-default.png",
+    pontos: 0,
+    nivel: 1,
+    caminhosPercorridos: [],
+    conquistas: ["Novo Peregrino"],
+    comentarios: [],
+    dataRegisto: new Date().toISOString(),
+    ultimoLogin: null
+  };
 
-  const existente = users.find(u => u.email === email);
-  if (existente) {
-    alert("Já existe um utilizador com este email.");
+  // ✅ Verifica duplicação com base no localStorage
+  const utilizadores = JSON.parse(localStorage.getItem("utilizadores")) || {};
+  if (utilizadores[userData.email]) {
+    alert("❌ Email já registado! Faz login ou usa outro.");
     return;
   }
 
-  users.push({ nome, email, password });
-  localStorage.setItem("peregrinos", JSON.stringify(users));
+  // Adiciona o novo utilizador ao localStorage
+  utilizadores[userData.email] = userData;
+  localStorage.setItem("utilizadores", JSON.stringify(utilizadores));
 
-  alert("Registo concluído com sucesso!");
-  window.location.href = "login.html";
+  // Define como utilizador atual
+  localStorage.setItem("utilizador_atual", JSON.stringify(userData));
+
+  alert("✅ Registo concluído com sucesso!");
+  window.location.href = "../profile.html";
 });
