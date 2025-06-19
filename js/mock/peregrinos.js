@@ -1,4 +1,4 @@
-// APAGAR COMENTÁRIOS?
+// APAGAR COMENTÁRIOS!!!
 export const peregrinos = [
   {
     id: 1,

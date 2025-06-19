@@ -1,7 +1,7 @@
 // Importa todos os mocks
 import { caminhos } from '../js/mock/caminhos.js';
-import { alojamentos } from '../mock/alojamentos.js';
-import { peregrinos } from '../mock/peregrinos.js';
+import { alojamentos } from '../js/mock/alojamentos.js';
+import { peregrinos } from '../js/mock/peregrinos.js';
 
 export class MockService {
   // ===== CAMINHOS =====

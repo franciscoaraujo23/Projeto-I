@@ -8,10 +8,10 @@
 
 // Importações (simuladas - em um projeto real seriam módulos ES6)
 import { AppState } from './appState.js';
-import { AuthService } from './services/authService.js';
-import { MockService } from './services/mockService.js';
-import { ApiService } from './services/apiService.js';
-import { setupNavigation } from './utils/helpers.js';
+import { AuthService } from '../services/authService.js';
+import { MockService } from '../services/mockService.js';
+import { ApiService } from '../services/apiService.js';
+import { setupNavigation } from '../utils/helpers.js';
 
 // Constantes
 const INITIAL_LOAD_ELEMENTS = ['routes', 'lodgings', 'comments', 'users'];
@@ -92,10 +92,10 @@ class AppInitializer {
     // Exemplo simples - em um projeto real seria mais elaborado
     switch(currentPage) {
       case 'profile':
-        if (!isAuthenticated) window.location.href = 'login.html';
+        if (!isAuthenticated) window.location.href = '../login.html';
         break;
       case 'login':
-        if (isAuthenticated) window.location.href = 'profile.html';
+        if (isAuthenticated) window.location.href = '../profile.html';
         break;
     }
   }

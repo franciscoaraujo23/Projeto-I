@@ -56,30 +56,7 @@
             <!--CENTRAR ESTA SECÇÃO E O LEMBRAR-ME-->
         </div>
     </div>
-    <script type="module">
-        import { authService } from './js/services/authService.js';
-        import { MESSAGES } from './js/utils/constants.js';
+    <script type="module" src="./js/support/login.js"></script>
 
-        document.querySelector('.auth-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-    
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-    
-    // Validação básica
-            if (!email || !password) {
-            alert(MESSAGES.AUTH_ERROR);
-            return;
-            }
-
-            const result = await authService.login(email, password);
-            
-            if (result.success) {
-            window.location.href = 'profile.html';
-            } else {
-            alert('Credenciais inválidas!');
-            }
-            });
-    </script>
 </body>
 </html>

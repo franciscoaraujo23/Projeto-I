@@ -5,7 +5,7 @@
  */
 
 import { peregrinos } from '../js/mock/peregrinos.js';
-import { appState } from '../appState.js';
+import { appState } from '../js/appState.js';
 import { STORAGE_KEYS, MESSAGES } from '../utils/constants.js';
 import { navigateTo } from '../utils/helpers.js';
 
@@ -71,7 +71,7 @@ class AuthService {
     const newUser = {
       ...userData,
       id: this.users.length + 1,
-      avatarUrl: 'img/avatar-default.png', // Imagem padrão
+      avatarUrl: 'img/avatar-default.png', // Imagem padrão!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       pontos: 0,
       nivel: 1,
       caminhosPercorridos: [],
