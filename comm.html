@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/comm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./assets/SantiGo.png" alt="Caminhos de Santiago" class="logo-img">
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="routes.html">Caminhos</a></li>
+                    <li><a href="lodging.html">Alojamentos</a></li>
+                    <li><a href="planning.html">Planeamento</a></li>
+                    <li><a href="community.html" class="active">Comunidade</a></li>
+                    <li><a href="login.html" class="auth-link"><i class="fas fa-user"></i> Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main class="leaderboard-comments">
+  <!-- Leaderboard -->
+        <section class="leaderboard">
+            <h2>Leaderboard</h2>
+            <div class="leaderboard-table">
+                <div class="leaderboard-header">
+                <span> <i class="fa-solid fa-user"></i> Utilizador</span>
+                <span> <i class="fas fa-route"></i> Rotas</span>
+                <span> <i class="fas fa-bed"></i> Estadias</span>
+                <span> <i class="fa-solid fa-person-walking"></i> Quilómetros</span>
+                <span> <i class="fa-solid fa-trophy"></i> Classificação</span>
+                </div>
+
+                <div class="leaderboard-row">
+                <span class="user">João Silva</span>
+                <span>5</span>
+                <span>12</span>
+                <span>210 km</span>
+                <span>1200 pts</span>
+                </div>
+
+                <div class="leaderboard-row">
+                <span class="user">Maria Santos</span>
+                <span>4</span>
+                <span>10</span>
+                <span>180 km</span>
+                <span>1150 pts</span>
+                </div>
+
+                <div class="leaderboard-row">
+                <span class="user">Carlos Vieira</span>
+                <span>4</span>
+                <span>8</span>
+                <span>170 km</span>
+                <span>1100 pts</span>
+                </div>
+
+                <div class="leaderboard-row">
+                <span class="user">José Crespo</span>
+                <span>2</span>
+                <span>5</span>
+                <span>102 km</span>
+                <span>900 pts</span>
+                </div>
+
+                <div class="leaderboard-row">
+                <span class="user">Joana Fonseca</span>
+                <span>1</span>
+                <span>2</span>
+                <span>78 km</span>
+                <span>400 pts</span>
+                </div>
+            </div>
+        </section>
+
+
+  <!-- Comentários por alojamento -->
+  <section class="comments">
+    <h2>Comentários sobre Alojamentos e Rotas</h2>
+
+    <!-- Alojamento 1 -->
+    <div class="lodging-block">
+      <h3>Hostel Porto Downtown</h3>
+      <p><strong>João Silva:</strong> Excelente localização e staff muito simpático!</p>
+
+      <textarea placeholder="Adiciona um comentário..."></textarea>
+      <button class="btn-primary">Adicionar Comentário</button>
+    </div>
+
+    <!-- Alojamento 2 -->
+    <div class="lodging-block">
+      <h3>Albergue Santiago</h3>
+      <p><strong>Carlos Vieira:</strong> Simples, mas muito acolhedor. Ótima relação qualidade/preço.</p>
+
+      <textarea placeholder="Adiciona um comentário..."></textarea>
+      <button class="btn-primary">Adicionar Comentário</button>
+    </div>
+
+    <!-- Rota -->
+    <div class="lodging-block">
+      <h3> Caminho Português Central</h3>
+      <p><strong>Maria Santos:</strong> A paisagem é deslumbrante, mas preparem-se para muitas subidas!</p>
+
+      <textarea placeholder="Adiciona um comentário..."></textarea>
+      <button class="btn-primary">Adicionar Comentário</button>
+    </div>
+  </section>
+</main>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Ajudamos peregrinos a planear a sua jornada desde 2023.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Blog do Peregrino</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Caminhos de Santiago. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
