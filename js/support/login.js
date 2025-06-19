@@ -19,7 +19,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
   if (user) {
     alert("Login efetuado com sucesso!");
     localStorage.setItem("utilizador_atual", JSON.stringify(user));
-    window.location.href = "index.html";
+    window.location.href = "./profile.html";
   } else {
     alert("Credenciais inválidas.");
   }

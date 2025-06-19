@@ -1,3 +1,5 @@
+// PASSES IGUAIS E LOCALSTORAGE NÃO RECONHECE MCOKDATA
+
 document.getElementById("register-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -26,5 +28,5 @@ document.getElementById("register-form").addEventListener("submit", function (e)
   localStorage.setItem("peregrinos", JSON.stringify(users));
 
   alert("Registo concluído com sucesso!");
-  window.location.href = "login.html";
+  window.location.href = "./profile.html";
 });
