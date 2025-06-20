@@ -1,7 +1,12 @@
+
 .routes-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/routes-bg.jpg');
+    background-image: url('/assets/landscape_routes.jpg');
+    background-color: rgba(0, 0, 0, 0.5); /* camada escura por cima */
+    background-blend-mode: darken;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    width: 100%;
     height: 40vh;
     display: flex;
     align-items: center;
@@ -18,7 +23,6 @@
     padding: 40px 0;
     background-color: var(--white);
     margin-top: -50px;
-    border-radius: 10px 10px 0 0;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -79,7 +83,7 @@
 }
 
 .route-item-content {
-    padding: 30px;
+    padding: 10px;
 }
 
 .route-item h3 {
@@ -127,12 +131,12 @@
     }
     
     .route-item-image {
-        height: 200px;
+        height: 300px;
     }
 }
 
 #central {
-  background-image: url('../assets/central.jpg');
+  background-image: url('../assets/central1.jpg');
 }
 
 #costeiro {
@@ -148,7 +152,7 @@
 }
 
 .route-item-image {
-  height: 200px;
+  height: 300px;
   background-size: cover;
   background-position: center;
   border-radius: 8px 8px 0 0;

@@ -137,8 +137,6 @@ nav ul li a.active {
     margin-right: 8px;       /* Mantém, para o nome não colar ao avatar */
 }
 
-
-/* ===== HERO ===== */
 .hero {
     background-color: #77736B;
     height: 60vh;

@@ -1,7 +1,12 @@
+
 .lodging-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/lodging-bg.jpg');
+    background-image: url('/assets/lodging.jpg');
+    background-color: rgba(0, 0, 0, 0.665); /* camada escura por cima */
+    background-blend-mode: darken;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    width: 100%;
     height: 40vh;
     display: flex;
     align-items: center;
@@ -81,15 +86,21 @@
     transform: translateY(-5px);
 }
 
-.lodging-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
+
+
+/* ——— Imagem dentro do card ——— */
+.lodging-card img.lodging-img {
+    width: 100%;          /* ocupa toda a largura do card */
+    max-height: 200px;    /* ajusta a altura máxima ao teu gosto */
+    object-fit: cover;    /* corta a foto para não distorcer */
+    display: block;       /* remove espaços indesejados abaixo da imagem */
 }
 
-#albergue1 {
-    background-color: #ddd; /* Substituir por imagem */
+.lodging-info {
+    padding-left: 15px;
+    padding-top: 10px;
 }
+
 
 .lodging-content {
     padding: 20px;
@@ -149,6 +160,8 @@
     flex: 1;
     text-align: center;
 }
+
+
 
 @media (max-width: 768px) {
     .form-row {

@@ -54,21 +54,28 @@ class LodgingView {
       const servicosHtml = a.servicos.map(s => `<li>${s}</li>`).join("");
 
       card.innerHTML = `
+        <img
+          src="${a.imagem || "./assets/central1.jpg"}"
+          alt="${a.nome}"
+          class="lodging-img"
+        >
         <div class="lodging-info">
           <h3>${a.nome}</h3>
           <p><strong>Localização:</strong> ${a.localizacao}</p>
           <p><strong>Tipo:</strong> ${a.tipo}</p>
           <p><strong>Preço/noite:</strong> ${a.precoPorNoite}€</p>
-          <p><strong>Lotação:</strong> ${a.lotacaoMaxima} pessoas</p>
-          <p><strong>Disponível:</strong> ${a.disponivel ? "✅ Sim" : "❌ Não"}</p>
-          <p><strong>Serviços:</strong></p>
-          <ul>${servicosHtml}</ul>
+          <p><strong>Serviços:</strong><br>
+            ${servicosHtml}</br>
+          </p>
+
           <p><strong>Contacto:</strong><br>
             Tel: ${a.contacto.telefone}<br>
             Email: ${a.contacto.email}
           </p>
         </div>
       `;
+
+      
 
       this.listContainer.appendChild(card);
     });
