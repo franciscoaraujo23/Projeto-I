@@ -1,7 +1,7 @@
 /**
  * Serviço de autenticação
- * - Login/logout com dados mockados
- * - Integração com localStorage e AppState
+ * Login/logout com dados mockados
+ * Integração com localStorage e AppState
  */
 
 import { peregrinos } from '../js/mock/peregrinos.js';
@@ -46,7 +46,7 @@ class AuthService {
   }
 
   /**
-   * Retorna o usuário logado (do storage)
+   * Retorna o utilizador logado (do storage)
    * @returns {object|null}
    */
   getCurrentUser() {
@@ -55,7 +55,7 @@ class AuthService {
   }
 
   /**
-   * Registro de novo usuário
+   * Registro de novo utilizador
    * @param {object} userData - { nome, email, password }
    * @returns {Promise<{success: boolean, message?: string, user?: object}>}
    */
@@ -71,7 +71,7 @@ class AuthService {
     const newUser = {
       ...userData,
       id: this.users.length + 1,
-      avatarUrl: 'img/avatar-default.png', // Imagem padrão!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      avatarUrl: 'img/avatar-default.png', // Imagem default
       pontos: 0,
       nivel: 1,
       caminhosPercorridos: [],

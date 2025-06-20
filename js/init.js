@@ -13,7 +13,7 @@ function associarComentariosAUtilizadores() {
   const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
 
   comentarios.forEach(comentario => {
-    // Adapta para o campo correto de email no teu objeto de comentário!
+    // Adapta para o campo correto de email no objeto de comentário!
     const userEmail = comentario.email || comentario.userEmail;
     if (!userEmail) return;
 
@@ -56,7 +56,7 @@ class AppInitializer {
       this.initializeViews();
       this.setupInitialRatings();
 
-      // ✅ Garante que a navbar é atualizada só depois de tudo estar pronto
+      // Garante que a navbar é atualizada só depois de tudo estar pronto
       setTimeout(() => {
         renderNavbarUser();
       }, 0);

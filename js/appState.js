@@ -1,9 +1,9 @@
 /**
  * Gerenciador central de estado da aplicação
  * Responsável por:
- * - Armazenar dados globais (rotas, alojamentos, usuários, etc.)
- * - Gerenciar estado de autenticação
- * - Notificar componentes sobre mudanças de estado
+ * Armazenar dados globais (rotas, alojamentos, usuários, etc.)
+ * Gerenciar estado de autenticação
+ * Notificar componentes sobre mudanças de estado
  */
 
 class AppState {
@@ -28,7 +28,7 @@ class AppState {
     this.listeners = [];
   }
 
-  // ==================== MÉTODOS PÚBLICOS ====================
+  //  MÉTODOS PÚBLICOS
 
   /**
    * Define dados no estado global
@@ -55,8 +55,8 @@ class AppState {
   }
 
   /**
-   * Define o usuário logado
-   * @param {object} user - Dados do usuário
+   * Define o utilizador logado
+   * @param {object} user - Dados do utilizador
    */
   setUser(user) {
     this.state.currentUser = user;
@@ -65,7 +65,7 @@ class AppState {
   }
 
   /**
-   * Remove o usuário logado (logout)
+   * Remove o utilizador logado (logout)
    */
   clearUser() {
     this.state.currentUser = null;
@@ -74,7 +74,7 @@ class AppState {
   }
 
   /**
-   * Verifica se há um usuário autenticado
+   * Verifica se há um utilizador autenticado
    * @returns {boolean}
    */
   isAuthenticated() {

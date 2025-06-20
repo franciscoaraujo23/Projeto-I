@@ -1,4 +1,3 @@
-// detailsView.js
 import { caminhos } from "../../mock/caminhos.js";
 
 export class DetailsView {

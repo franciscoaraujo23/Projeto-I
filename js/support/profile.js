@@ -3,7 +3,7 @@ console.log("Utilizador atual:", localStorage.getItem("utilizador_atual"));
 
 import { appState } from '../appState.js';
 import { renderUserData } from '../views/user/profileView.js';
-import { renderNavbarUser } from '../views/user/userViews.js'; // ✅ já está certo aqui
+import { renderNavbarUser } from '../views/user/userViews.js'; // já está certo aqui
 
 // Elementos DOM
 const editBtn = document.getElementById('edit-profile-btn');
@@ -14,7 +14,7 @@ const avatarUpload = document.getElementById('avatar-upload');
 const changeAvatarBtn = document.getElementById('change-avatar-btn');
 const userAvatar = document.getElementById('user-avatar');
 
-// 🔄 Carregar dados do utilizador atual
+// Carregar dados do utilizador atual
 function loadUserData() {
   const user = JSON.parse(localStorage.getItem('utilizador_atual'));
   if (!user) {
@@ -27,7 +27,7 @@ function loadUserData() {
   renderUserData(user);
 }
 
-// ✏️ Editar perfil
+// Editar perfil
 editBtn.addEventListener('click', () => {
   const user = appState.getData('currentUser');
   document.getElementById('edit-name').value = user.nome;
@@ -61,12 +61,12 @@ document.getElementById('edit-form').addEventListener('submit', (e) => {
 
   appState.setUser(user);
   renderUserData(user);
-  renderNavbarUser(); // ✅ Atualiza a navbar com novo nome/avatar
+  renderNavbarUser(); // Atualiza a navbar com novo nome/avatar
   editModal.style.display = 'none';
   alert('Perfil atualizado!');
 });
 
-// 🖼️ Upload de avatar
+// Upload de avatar
 changeAvatarBtn.addEventListener('click', () => avatarUpload.click());
 
 avatarUpload.addEventListener('change', (e) => {
@@ -84,18 +84,18 @@ avatarUpload.addEventListener('change', (e) => {
       localStorage.setItem("utilizadores", JSON.stringify(utilizadores));
       localStorage.setItem("utilizador_atual", JSON.stringify(user));
       appState.setUser(user);
-      renderNavbarUser(); // ✅ Atualiza a navbar com novo avatar
+      renderNavbarUser(); // Atualiza a navbar com novo avatar
     };
     reader.readAsDataURL(file);
   }
 });
 
-// 🚪 Logout
+// Logout
 logoutBtn.addEventListener('click', () => {
   localStorage.removeItem('utilizador_atual');
   appState.clearUser?.();
   window.location.href = "index.html";
 });
 
-// ▶️ Inicializar
+// Inicializar
 document.addEventListener('DOMContentLoaded', loadUserData);

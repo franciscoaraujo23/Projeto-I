@@ -1,5 +1,3 @@
-// js/views/user/userViews.js
-
 import { getLoggedInUser } from "../../models/userModel.js";
 
 export function renderNavbarUser() {

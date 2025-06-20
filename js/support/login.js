@@ -17,15 +17,15 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     return;
   }
 
-  // ✅ Garante que o campo email está presente no objeto user
+  // Garante que o campo email está presente no objeto user
   user.email = email;
 
-  // ✅ Atualizar último login
+  // Atualizar último login
   user.ultimoLogin = new Date().toISOString();
 
-  // ✅ Guardar como utilizador atual
+  // Guardar como utilizador atual
   localStorage.setItem("utilizador_atual", JSON.stringify(user));
 
-  // ✅ Redirecionar
+  // Redirecionar
   window.location.href = "index.html";
 });
