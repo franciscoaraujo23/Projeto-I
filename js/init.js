@@ -5,8 +5,35 @@ import { MockService as ApiService } from '../services/apiService.js';
 import { setupNavigation } from '../utils/helpers.js';
 import { renderNavbarUser } from './views/user/userViews.js';
 
-
 const INITIAL_LOAD_ELEMENTS = ['routes', 'lodgings', 'comments', 'users'];
+
+// Função para associar comentários aos utilizadores (adiciona aqui!)
+function associarComentariosAUtilizadores() {
+  const utilizadores = JSON.parse(localStorage.getItem("utilizadores")) || {};
+  const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+
+  comentarios.forEach(comentario => {
+    // Adapta para o campo correto de email no teu objeto de comentário!
+    const userEmail = comentario.email || comentario.userEmail;
+    if (!userEmail) return;
+
+    if (utilizadores[userEmail]) {
+      if (!utilizadores[userEmail].comentarios) {
+        utilizadores[userEmail].comentarios = [];
+      }
+      // Evita duplicados
+      const jaTem = utilizadores[userEmail].comentarios.some(
+        c => c.id === comentario.id
+      );
+      if (!jaTem) {
+        utilizadores[userEmail].comentarios.push(comentario);
+      }
+    }
+  });
+
+  localStorage.setItem("utilizadores", JSON.stringify(utilizadores));
+  console.log("✅ Comentários associados aos utilizadores no LocalStorage!");
+}
 
 class AppInitializer {
   constructor() {
@@ -21,6 +48,8 @@ class AppInitializer {
       await this.loadInitialData();
 
       this.mockService.inicializarUtilizadoresMock();
+      associarComentariosAUtilizadores(); // <--- CHAMA AQUI!
+
       this.setupAuth();
       setupNavigation();
 

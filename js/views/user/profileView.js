@@ -19,15 +19,22 @@ export function renderUserData(user) {
   document.getElementById('register-date').innerHTML = `<i class="far fa-calendar-alt"></i> Registado desde ${formatDate(user.dataRegisto)}`;
   document.getElementById('last-login').innerHTML = `<i class="far fa-clock"></i> Último login: ${formatDate(user.ultimoLogin)}`;
 
-  const nivel = user.nivel || 1;
   const pontos = user.pontos || 0;
-  const total = 100 * nivel;
-  const percentagem = Math.min(100, (pontos / total) * 100);
+  const nivel = Math.floor(pontos / 100) + 1;
+  const pontosNesteNivel = pontos % 100;
+  const percentagem = (pontosNesteNivel / 100) * 100;
+  const pontosParaProximoNivel = 100 - pontosNesteNivel;
 
   document.getElementById('current-level').textContent = getLevelName(nivel);
   document.querySelector('.level-badge').textContent = nivel;
   document.getElementById('progress-bar').style.width = `${percentagem}%`;
   document.getElementById('user-points').textContent = pontos;
+
+  // Mostra quantos pontos faltam para o próximo nível
+  const pontosFaltamElem = document.getElementById('pontos-faltam');
+  if (pontosFaltamElem) {
+    pontosFaltamElem.textContent = `Faltam ${pontosParaProximoNivel} pontos para o próximo nível`;
+  }
 
   const commentContainer = document.querySelector('.comment-list');
   if (user.comentarios?.length > 0) {

@@ -4,28 +4,34 @@ import { comentarios } from '../js/mock/comentarios.js';
 import { peregrinos } from '../js/mock/peregrinos.js';
 
 class MockService {
- inicializarUtilizadoresMock() {
-  
-  const armazenados = JSON.parse(localStorage.getItem("utilizadores")) || {};
+  inicializarUtilizadoresMock() {
+    console.log("➡️ A correr inicializarUtilizadoresMock");
 
-  peregrinos.forEach(p => {
-    if (!armazenados[p.email]) {
-      armazenados[p.email] = {
-        nome: p.nome,
-        password: p.password,
-        pontos: p.pontos || 0,
-        nivel: p.nivel || 0,
-        avatarUrl: p.avatarUrl || "",
-        conquistas: p.conquistas || [],
-        caminhosPercorridos: p.caminhosPercorridos || [],
-        etapasConcluidas: p.etapasConcluidas || 0
-      };
-    }
-  });
+    const armazenados = JSON.parse(localStorage.getItem("utilizadores")) || {};
 
-  localStorage.setItem("utilizadores", JSON.stringify(armazenados));
-  console.log("✅ Utilizadores carregados do peregrinos.js para localStorage");
-}
+    peregrinos.forEach(p => {
+      if (!armazenados[p.email]) {
+        armazenados[p.email] = {
+          id: p.id,
+          nome: p.nome,
+          email: p.email,
+          password: p.password,
+          avatarUrl: p.avatarUrl || "./assets/avatar-default.png",
+          pontos: p.pontos || 0,
+          nivel: p.nivel || 0,
+          caminhosPercorridos: p.caminhosPercorridos || [],
+          etapasConcluidas: p.etapasConcluidas || 0,
+          conquistas: p.conquistas || [],
+          comentarios: p.comentarios || []  // <-- aqui vai buscar os comentários do mock
+        };
+      }
+    });
+
+    
+
+    localStorage.setItem("utilizadores", JSON.stringify(armazenados));
+    console.log("✅ Utilizadores carregados do peregrinos.js para localStorage");
+  }
 
 
   getAlojamentos() {
