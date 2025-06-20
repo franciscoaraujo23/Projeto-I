@@ -2,11 +2,11 @@ export const alojamentos = [
   {
     id: 1,
     nome: "Albergue do Caminho",
+    imagem: "./assets/albergue do caminho.jpg",
     localizacao: "Porto",
     tipo: "Albergue",
     precoPorNoite: 15,
-    lotacaoMaxima: 20,
-    disponivel: true,
+
     coordenadas: { lat: 41.1579, lng: -8.6291 },
     servicos: ["Wi-Fi", "Pequeno-almoço", "Roupa de cama"],
     contacto: {
@@ -17,11 +17,11 @@ export const alojamentos = [
   {
     id: 2,
     nome: "Casa do Peregrino",
+    imagem: "./assets/casa do peregrino.jpg",
     localizacao: "Valença",
     tipo: "Guesthouse",
     precoPorNoite: 25,
-    lotacaoMaxima: 10,
-    disponivel: true,
+
     coordenadas: { lat: 42.0314, lng: -8.6455 },
     servicos: ["Wi-Fi", "Estacionamento", "Pequeno-almoço", "Toalhas"],
     contacto: {
@@ -32,11 +32,11 @@ export const alojamentos = [
   {
     id: 3,
     nome: "Pousada Santiago",
+    imagem: "./assets/pousada santiago.jpg",
     localizacao: "Santiago de Compostela",
     tipo: "Hotel",
     precoPorNoite: 60,
-    lotacaoMaxima: 50,
-    disponivel: false,
+
     coordenadas: { lat: 42.8805, lng: -8.5457 },
     servicos: ["Wi-Fi", "Pequeno-almoço", "Restaurante", "Lavandaria"],
     contacto: {
@@ -47,11 +47,11 @@ export const alojamentos = [
   {
     id: 4,
     nome: "Refúgio do Caminhante",
+    imagem: "./assets/refugio do caminhante.jpg",
     localizacao: "Tui",
     tipo: "Albergue",
     precoPorNoite: 18,
-    lotacaoMaxima: 15,
-    disponivel: true,
+
     coordenadas: { lat: 42.0471, lng: -8.6440 },
     servicos: ["Wi-Fi", "Pequeno-almoço"],
     contacto: {
@@ -62,11 +62,11 @@ export const alojamentos = [
   {
     id: 5,
     nome: "Hospedaria Estrela do Norte",
+    imagem: "./assets/hospededaria.jpg",
     localizacao: "Ponte de Lima",
-    tipo: "Hospedaria",
+    tipo: "Albergue",
     precoPorNoite: 22,
-    lotacaoMaxima: 12,
-    disponivel: true,
+
     coordenadas: { lat: 41.7677, lng: -8.5836 },
     servicos: ["Wi-Fi", "Toalhas", "Lavandaria"],
     contacto: {
@@ -77,11 +77,11 @@ export const alojamentos = [
   {
     id: 6,
     nome: "Quinta do Caminho",
+    imagem: "./assets/quinta do caminho.jpg",
     localizacao: "Rubiães",
-    tipo: "Casa Rural",
+    tipo: "Guesthouse",
     precoPorNoite: 30,
-    lotacaoMaxima: 8,
-    disponivel: true,
+
     coordenadas: { lat: 41.8931, lng: -8.6643 },
     servicos: ["Wi-Fi", "Pequeno-almoço", "Estacionamento"],
     contacto: {
@@ -92,11 +92,11 @@ export const alojamentos = [
   {
     id: 7,
     nome: "Albergue São Tiago",
+    imagem: "./assets/albergue sao tiago.jpg",
     localizacao: "Barcelos",
     tipo: "Albergue",
     precoPorNoite: 14,
-    lotacaoMaxima: 25,
-    disponivel: true,
+
     coordenadas: { lat: 41.5316, lng: -8.6187 },
     servicos: ["Wi-Fi", "Roupa de cama"],
     contacto: {
@@ -107,11 +107,11 @@ export const alojamentos = [
   {
     id: 8,
     nome: "Hotel Caminho Real",
+    imagem: "./assets/hotel caminho real.jpg",
     localizacao: "Ourense",
     tipo: "Hotel",
     precoPorNoite: 55,
-    lotacaoMaxima: 40,
-    disponivel: false,
+
     coordenadas: { lat: 42.3361, lng: -7.8640 },
     servicos: ["Wi-Fi", "Pequeno-almoço", "Restaurante", "Spa"],
     contacto: {
@@ -121,12 +121,12 @@ export const alojamentos = [
   },
   {
     id: 9,
-    nome: "Hostel Trilho Verde",
+    nome: "Hotel Trilho Verde",
+    imagem: "./assets/hostel trilho verde.jpg",
     localizacao: "Redondela",
-    tipo: "Hostel",
+    tipo: "Hotel",
     precoPorNoite: 20,
-    lotacaoMaxima: 18,
-    disponivel: true,
+
     coordenadas: { lat: 42.2836, lng: -8.6094 },
     servicos: ["Wi-Fi", "Pequeno-almoço", "Lavandaria"],
     contacto: {
@@ -137,11 +137,11 @@ export const alojamentos = [
   {
     id: 10,
     nome: "Estalagem da Ponte",
+    imagem: "./assets/estalagem.jpg",
     localizacao: "Padrón",
-    tipo: "Estalagem",
+    tipo: "Albergue",
     precoPorNoite: 28,
-    lotacaoMaxima: 14,
-    disponivel: true,
+
     coordenadas: { lat: 42.7383, lng: -8.6608 },
     servicos: ["Wi-Fi", "Pequeno-almoço", "Toalhas"],
     contacto: {

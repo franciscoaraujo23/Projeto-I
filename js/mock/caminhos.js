@@ -6,7 +6,7 @@ export const caminhos = [
     "destino": "Santiago de Compostela",
     "descricao": "Este percurso atravessa o norte de Portugal e a Galiza, passando por cidades históricas como Ponte de Lima e Valença.",
     "geojson": "geojson/central.geojson",
-    "imagem": "./assets/central.jpg",
+    "imagem": "./assets/central1.jpg",
     
     "versoes": [
       {
