@@ -27,5 +27,5 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
   localStorage.setItem("utilizador_atual", JSON.stringify(user));
 
   // ✅ Redirecionar
-  window.location.href = "profile.html";
+  window.location.href = "index.html";
 });

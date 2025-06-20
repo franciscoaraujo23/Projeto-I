@@ -5,7 +5,7 @@ export const peregrinos = [
     nome: "João Silva",
     email: "joao.silva@mail.com",
     password: "123456",
-    avatarUrl: "../../assets./avatars/image0.png",
+    avatarUrl: "./assets/avatars/image1.png",
     pontos: 350,
     nivel: 3,
     caminhosPercorridos: ["Caminho Português", "Caminho Francês"],
@@ -14,7 +14,7 @@ export const peregrinos = [
     comentarios: [
       {
         idComentario: 101,
-        texto: "Excelente etapa!",
+        texto: "Foi das melhores experiências da minha vida! Adorei a diversidade de pessoas e os pequenos gestos de ajuda pelo caminho.",
         data: "2025-06-01"
       }
     ],
@@ -26,7 +26,7 @@ export const peregrinos = [
     nome: "Maria Costa",
     email: "maria.costa@mail.com",
     password: "abcdef",
-    avatarUrl: "img/avatar2.png",
+    avatarUrl: "./assets/avatars/image2.png",
     pontos: 90,
     nivel: 1,
     caminhosPercorridos: ["Caminho Português"],
@@ -35,7 +35,7 @@ export const peregrinos = [
     comentarios: [
       {
         idComentario: 102,
-        texto: "Boa paisagem, recomendo!",
+        texto: "Recomendo a todos que procuram um desafio pessoal e momentos de reflexão. Os dias passados na natureza são inesquecíveis.",
         data: "2025-06-10"
       }
     ],
@@ -47,7 +47,7 @@ export const peregrinos = [
     nome: "Carlos Mendes",
     email: "carlos.mendes@mail.com",
     password: "qwerty",
-    avatarUrl: "../../assets./avatars./image0.png",
+    avatarUrl: "./assets/avatars/image3.png",
     pontos: 780,
     nivel: 5,
     caminhosPercorridos: ["Caminho Francês", "Caminho do Norte", "Via de la Plata"],
@@ -56,12 +56,12 @@ export const peregrinos = [
     comentarios: [
       {
         idComentario: 103,
-        texto: "Cheguei ao fim, uma jornada inesquecível.",
+        texto: "Conheci pessoas de todo o mundo e senti-me sempre em segurança. Os albergues são simples mas acolhedores.",
         data: "2025-06-12"
       },
       {
         idComentario: 104,
-        texto: "Desafiante, mas valeu a pena!",
+        texto: "O espírito de partilha entre os peregrinos e as paisagens naturais tornaram esta viagem inesquecível.",
         data: "2025-06-14"
       }
     ],
@@ -73,7 +73,7 @@ export const peregrinos = [
     nome: "Ana Ribeiro",
     email: "ana.ribeiro@mail.com",
     password: "senha123",
-    avatarUrl: "img/avatar4.png",
+    avatarUrl: "./assets/avatars/image7.jpg",
     pontos: 260,
     nivel: 2,
     caminhosPercorridos: ["Caminho Português"],
@@ -88,7 +88,7 @@ export const peregrinos = [
     nome: "Rui Almeida",
     email: "rui.almeida@mail.com",
     password: "cam1nho",
-    avatarUrl: "img/avatar5.png",
+    avatarUrl: "../assets/avatars/image5.jpg",
     pontos: 610,
     nivel: 4,
     caminhosPercorridos: ["Caminho Francês", "Caminho Inglês"],
@@ -97,7 +97,7 @@ export const peregrinos = [
     comentarios: [
       {
         idComentario: 105,
-        texto: "A etapa mais difícil até agora.",
+        texto: "A sensação de chegar a Santiago é indescritível! Vale a pena todo o esforço durante o caminho.",
         data: "2025-06-13"
       }
     ],
@@ -110,7 +110,7 @@ export const peregrinos = [
     nome: "Beatriz Nunes",
     email: "beatriz.nunes@mail.com",
     password: "senha456",
-    avatarUrl: "img/avatar6.png",
+    avatarUrl: "./assets/avatars/image6.jpg",
     pontos: 120,
     nivel: 2,
     caminhosPercorridos: ["Caminho Português"],
@@ -119,7 +119,7 @@ export const peregrinos = [
     comentarios: [
       {
         idComentario: 106,
-        texto: "Choveu bastante, mas foi tranquilo.",
+        texto: "Adorei o contacto com a natureza e a simpatia dos habitantes das pequenas aldeias por onde passei.",
         data: "2025-06-11"
       }
     ],
@@ -131,7 +131,7 @@ export const peregrinos = [
     nome: "Tiago Moreira",
     email: "tiago.moreira@mail.com",
     password: "moreira2025",
-    avatarUrl: "img/avatar7.png",
+    avatarUrl: "./assets/avatars/image0.png",
     pontos: 45,
     nivel: 1,
     caminhosPercorridos: [],
@@ -146,7 +146,7 @@ export const peregrinos = [
     nome: "Sofia Matos",
     email: "sofia.matos@mail.com",
     password: "sofia123",
-    avatarUrl: "img/avatar8.png",
+    avatarUrl: "./assets/avatars/image4.jpg",
     pontos: 670,
     nivel: 4,
     caminhosPercorridos: ["Caminho Francês", "Caminho Primitivo"],
@@ -155,7 +155,7 @@ export const peregrinos = [
     comentarios: [
       {
         idComentario: 107,
-        texto: "Melhor trilho até agora!",
+        texto: "A gastronomia local é excelente e cada dia traz uma nova descoberta. Uma aventura a repetir!",
         data: "2025-06-12"
       }
     ],

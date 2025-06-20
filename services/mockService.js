@@ -5,8 +5,7 @@ import { peregrinos } from '../js/mock/peregrinos.js';
 
 class MockService {
  inicializarUtilizadoresMock() {
-  console.log("➡️ A correr inicializarUtilizadoresMock");
-
+  
   const armazenados = JSON.parse(localStorage.getItem("utilizadores")) || {};
 
   peregrinos.forEach(p => {

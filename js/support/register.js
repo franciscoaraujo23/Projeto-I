@@ -14,7 +14,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     nome,
     email,
     password,
-    avatarUrl: "assets/avatars/image0.png",
+    avatarUrl: "assets/avatars/avatardefault.png",
 
     pontos: 0,
     nivel: 1,
@@ -38,5 +38,5 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
   localStorage.setItem("utilizador_atual", JSON.stringify(userData));
 
   alert("✅ Registo concluído com sucesso!");
-  window.location.href = "profile.html";
+  window.location.href = "index.html";
 });

@@ -1,7 +1,9 @@
 console.log("Carregou profile.js!");
 console.log("Utilizador atual:", localStorage.getItem("utilizador_atual"));
+
 import { appState } from '../appState.js';
 import { renderUserData } from '../views/user/profileView.js';
+import { renderNavbarUser } from '../views/user/userViews.js'; // ✅ já está certo aqui
 
 // Elementos DOM
 const editBtn = document.getElementById('edit-profile-btn');
@@ -59,6 +61,7 @@ document.getElementById('edit-form').addEventListener('submit', (e) => {
 
   appState.setUser(user);
   renderUserData(user);
+  renderNavbarUser(); // ✅ Atualiza a navbar com novo nome/avatar
   editModal.style.display = 'none';
   alert('Perfil atualizado!');
 });
@@ -81,6 +84,7 @@ avatarUpload.addEventListener('change', (e) => {
       localStorage.setItem("utilizadores", JSON.stringify(utilizadores));
       localStorage.setItem("utilizador_atual", JSON.stringify(user));
       appState.setUser(user);
+      renderNavbarUser(); // ✅ Atualiza a navbar com novo avatar
     };
     reader.readAsDataURL(file);
   }
@@ -90,7 +94,7 @@ avatarUpload.addEventListener('change', (e) => {
 logoutBtn.addEventListener('click', () => {
   localStorage.removeItem('utilizador_atual');
   appState.clearUser?.();
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
 
 // ▶️ Inicializar

@@ -3,6 +3,8 @@ import { authService } from '../services/authService.js';
 import { mockService } from '../services/mockService.js';
 import { MockService as ApiService } from '../services/apiService.js';
 import { setupNavigation } from '../utils/helpers.js';
+import { renderNavbarUser } from './views/user/userViews.js';
+
 
 const INITIAL_LOAD_ELEMENTS = ['routes', 'lodgings', 'comments', 'users'];
 
@@ -18,11 +20,18 @@ class AppInitializer {
     try {
       await this.loadInitialData();
 
-      // ✅ Garante que os utilizadores mock são inseridos
       this.mockService.inicializarUtilizadoresMock();
-
       this.setupAuth();
       setupNavigation();
+
+      this.initializeViews();
+      this.setupInitialRatings();
+
+      // ✅ Garante que a navbar é atualizada só depois de tudo estar pronto
+      setTimeout(() => {
+        renderNavbarUser();
+      }, 0);
+
       console.log('Aplicação inicializada com sucesso!');
     } catch (error) {
       console.error('Falha na inicialização:', error);
@@ -43,9 +52,6 @@ class AppInitializer {
     if (currentUser) {
       this.appState.setUser(currentUser);
     }
-
-    // ❌ removeu os listeners que não existem
-    this.initializeViews();
   }
 
   initializeViews() {
@@ -61,22 +67,20 @@ class AppInitializer {
         break;
     }
   }
+
+  setupInitialRatings() {
+    const idsCaminhos = [1, 2, 3, 4];
+    idsCaminhos.forEach(id => {
+      const chave = `avaliacao_${id}`;
+      if (!localStorage.getItem(chave)) {
+        const avaliacaoInicial = (Math.random() * 1.5 + 3.5).toFixed(1);
+        localStorage.setItem(chave, avaliacaoInicial);
+      }
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new AppInitializer();
   app.initialize();
-});
-
-this.setupAuth();
-setupNavigation();
-
-// ⬇️ Avaliações iniciais
-const idsCaminhos = [1, 2, 3, 4];
-idsCaminhos.forEach(id => {
-  const chave = `avaliacao_${id}`;
-  if (!localStorage.getItem(chave)) {
-    const avaliacaoInicial = (Math.random() * 1.5 + 3.5).toFixed(1);
-    localStorage.setItem(chave, avaliacaoInicial);
-  }
 });
