@@ -460,7 +460,7 @@ export const caminhos = [
     "destino": "Santiago de Compostela",
     "descricao": "Este caminho percorre a costa norte de Portugal e da Galiza, com vistas incríveis do Atlântico.",
     "geojson": "geojson/costeiro.geojson",
-    "imagem": "./assets/costa.jpg",
+    "imagem": "./assets/caminhoportugues.jpg",
     "versoes": [
       {
         "dificuldade": "Fácil",
@@ -931,7 +931,7 @@ export const caminhos = [
     "destino": "Finisterra",
     "descricao": "Extensão do Caminho até à 'fim da terra', passando por paisagens naturais únicas da Galiza.",
     "geojson": "geojson/finisterra.geojson",
-    "imagem": "./assets/finisterra.jpg",
+    "imagem": "./assets/finistera.jpg",
     "versoes": [
       {
         "dificuldade": "Fácil",
@@ -1082,7 +1082,7 @@ export const caminhos = [
   "destino": "Santiago de Compostela",
   "descricao": "Este caminho inicia em Tui, na fronteira com Portugal, atravessando cidades históricas como O Porriño, Pontevedra e Padrón até chegar a Santiago de Compostela.",
   "geojson": "geojson/costatui.geojson",
-  "imagem": "./assets/geira.jpg",
+  "imagem": "./assets/quarto.jpg",
   "versoes": [
     {
       "dificuldade": "Fácil",
