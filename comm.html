@@ -21,7 +21,6 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="routes.html">Caminhos</a></li>
                     <li><a href="lodging.html">Alojamentos</a></li>
-                    <li><a href="planning.html">Planeamento</a></li>
                     <li><a href="community.html" class="active">Comunidade</a></li>
                     <li><a href="login.html" class="auth-link"><i class="fas fa-user"></i> Entrar</a></li>
                 </ul>
@@ -29,95 +28,23 @@
         </div>
     </header>
 
-<main class="leaderboard-comments">
-  <!-- Leaderboard -->
+    <main class="leaderboard-comments">
+        <!-- Leaderboard -->
         <section class="leaderboard">
             <h2>Leaderboard</h2>
             <div class="leaderboard-table">
-                <div class="leaderboard-header">
-                <span> <i class="fa-solid fa-user"></i> Utilizador</span>
-                <span> <i class="fas fa-route"></i> Rotas</span>
-                <span> <i class="fas fa-bed"></i> Estadias</span>
-                <span> <i class="fa-solid fa-person-walking"></i> Quilómetros</span>
-                <span> <i class="fa-solid fa-trophy"></i> Classificação</span>
-                </div>
-
-                <div class="leaderboard-row">
-                <span class="user">João Silva</span>
-                <span>5</span>
-                <span>12</span>
-                <span>210 km</span>
-                <span>1200 pts</span>
-                </div>
-
-                <div class="leaderboard-row">
-                <span class="user">Maria Santos</span>
-                <span>4</span>
-                <span>10</span>
-                <span>180 km</span>
-                <span>1150 pts</span>
-                </div>
-
-                <div class="leaderboard-row">
-                <span class="user">Carlos Vieira</span>
-                <span>4</span>
-                <span>8</span>
-                <span>170 km</span>
-                <span>1100 pts</span>
-                </div>
-
-                <div class="leaderboard-row">
-                <span class="user">José Crespo</span>
-                <span>2</span>
-                <span>5</span>
-                <span>102 km</span>
-                <span>900 pts</span>
-                </div>
-
-                <div class="leaderboard-row">
-                <span class="user">Joana Fonseca</span>
-                <span>1</span>
-                <span>2</span>
-                <span>78 km</span>
-                <span>400 pts</span>
-                </div>
+                <!-- Cabeçalho é criado dinamicamente pela View -->
             </div>
         </section>
 
-
-  <!-- Comentários por alojamento -->
-  <section class="comments">
-    <h2>Comentários sobre Alojamentos e Rotas</h2>
-
-    <!-- Alojamento 1 -->
-    <div class="lodging-block">
-      <h3>Hostel Porto Downtown</h3>
-      <p><strong>João Silva:</strong> Excelente localização e staff muito simpático!</p>
-
-      <textarea placeholder="Adiciona um comentário..."></textarea>
-      <button class="btn-primary">Adicionar Comentário</button>
-    </div>
-
-    <!-- Alojamento 2 -->
-    <div class="lodging-block">
-      <h3>Albergue Santiago</h3>
-      <p><strong>Carlos Vieira:</strong> Simples, mas muito acolhedor. Ótima relação qualidade/preço.</p>
-
-      <textarea placeholder="Adiciona um comentário..."></textarea>
-      <button class="btn-primary">Adicionar Comentário</button>
-    </div>
-
-    <!-- Rota -->
-    <div class="lodging-block">
-      <h3> Caminho Português Central</h3>
-      <p><strong>Maria Santos:</strong> A paisagem é deslumbrante, mas preparem-se para muitas subidas!</p>
-
-      <textarea placeholder="Adiciona um comentário..."></textarea>
-      <button class="btn-primary">Adicionar Comentário</button>
-    </div>
-  </section>
-</main>
-
+        <!-- Comentários Recentes -->
+        <section class="comments">
+            <h2>Comentários Recentes</h2>
+            <div class="comment-list">
+                <!-- Comentários carregados dinamicamente -->
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -146,5 +73,7 @@
             <p>&copy; 2023 Caminhos de Santiago. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script type="module" src="./js/views/user/commView.js"></script>
 </body>
 </html>

@@ -47,7 +47,7 @@ export const peregrinos = [
     nome: "Carlos Mendes",
     email: "carlos.mendes@mail.com",
     password: "qwerty",
-    avatarUrl: "img/avatar3.png",
+    avatarUrl: "../../assets./avatars./image0.png",
     pontos: 780,
     nivel: 5,
     caminhosPercorridos: ["Caminho Francês", "Caminho do Norte", "Via de la Plata"],
