@@ -14,7 +14,7 @@ function mapPeregrinosComComentarios() {
 /**
  * Devolve a leaderboard dos utilizadores ordenados por pontos.
  */
-export function getLeaderboard(limit = 10) {
+export function getLeaderboard(limit = 5) {
   return [...peregrinos]
     .sort((a, b) => b.pontos - a.pontos)
     .slice(0, limit);
