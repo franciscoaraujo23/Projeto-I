@@ -5,7 +5,7 @@ export const peregrinos = [
     nome: "João Silva",
     email: "joao.silva@mail.com",
     password: "123456",
-    avatarUrl: "img/avatar1.png",
+    avatarUrl: "../../assets./avatars/image0.png",
     pontos: 350,
     nivel: 3,
     caminhosPercorridos: ["Caminho Português", "Caminho Francês"],

@@ -14,14 +14,15 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     nome,
     email,
     password,
-    avatarUrl: "img/avatar-default.png",
+    avatarUrl: "assets/avatars/image0.png",
+
     pontos: 0,
     nivel: 1,
     caminhosPercorridos: [],
     conquistas: ["Novo Peregrino"],
     comentarios: [],
     dataRegisto: new Date().toISOString(),
-    ultimoLogin: null
+    ultimoLogin: new Date().toISOString() // ✅ Corrigido: necessário para o perfil
   };
 
   // ✅ Verifica duplicação com base no localStorage
@@ -31,13 +32,11 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     return;
   }
 
-  // Adiciona o novo utilizador ao localStorage
+  // ✅ Guarda no localStorage
   utilizadores[userData.email] = userData;
   localStorage.setItem("utilizadores", JSON.stringify(utilizadores));
-
-  // Define como utilizador atual
   localStorage.setItem("utilizador_atual", JSON.stringify(userData));
 
   alert("✅ Registo concluído com sucesso!");
-  window.location.href = "../profile.html";
+  window.location.href = "profile.html";
 });
