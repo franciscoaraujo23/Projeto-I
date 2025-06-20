@@ -48,7 +48,7 @@ class AppInitializer {
       await this.loadInitialData();
 
       this.mockService.inicializarUtilizadoresMock();
-      associarComentariosAUtilizadores(); // <--- CHAMA AQUI!
+      associarComentariosAUtilizadores();
 
       this.setupAuth();
       setupNavigation();

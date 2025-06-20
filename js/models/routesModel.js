@@ -19,12 +19,6 @@ export function getAvaliacao(id) {
   return avaliacoes.get(id);
 }
 
-export function alterarAvaliacao(id, delta) {
-  let atual = avaliacoes.get(id);
-  atual = Math.max(0.1, Math.min(5, atual + delta));
-  avaliacoes.set(id, parseFloat(atual.toFixed(1)));
-}
-
 export function filtrarCaminhosPorNome(nome) {
   return caminhos.filter(c => c.nome.toLowerCase().includes(nome.toLowerCase()));
 }

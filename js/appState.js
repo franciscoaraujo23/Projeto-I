@@ -1,10 +1,3 @@
-/**
- * Gerenciador central de estado da aplicação
- * Responsável por:
- * Armazenar dados globais (rotas, alojamentos, usuários, etc.)
- * Gerenciar estado de autenticação
- * Notificar componentes sobre mudanças de estado
- */
 
 class AppState {
   constructor() {
@@ -101,8 +94,6 @@ class AppState {
     this.listeners.push({ key, callback });
     return this;
   }
-
-  // ==================== MÉTODOS PRIVADOS ====================
 
   /**
    * Notifica listeners sobre mudanças
